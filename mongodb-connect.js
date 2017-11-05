@@ -17,21 +17,47 @@ MongoClient.connect('mongodb://localhost:27017/ToDoApp', (err, db) => {
     console.log('Connected to MongoDB!');
     
     
-    db.collection('ToDos').find().count().then( (count) => {
-        console.log('ToDos Size', count);
-        db.close();
-    }, (err) => {
-        console.log('Unable to fetch documents.', err);
-    });
+    //  FIND ONE AND UPDATE
+    // db.collection('ToDos').findOneAndUpdate({
+    //     _id: new ObjectID('59fc6a4883342c961082e6b3')
+    // }, {
+    //     $set: {
+    //         completed: true
+    //     }
+    // }, {
+    //     returnOriginal: false
+    // }).then( (result) => {
+    //     console.log(result);
+    // });
 
+    //  FIND ONE AND DELETE
+    // db.collection('ToDos').findOneAndDelete({completed: false}).then( (result) => {
+    //     console.log(result);
+    // });
+
+    //  DELETE MANY and ONE
+    // db.collection('ToDos').deleteOne({todo: 'Exercise'}).then( (result) => {
+    //     console.log(result.result);
+    // });
+
+    //  GET COUNT PROMISE
+    // db.collection('ToDos').find().count().then( (count) => {
+    //     console.log('ToDos Size', count);
+    //     db.close();
+    // }, (err) => {
+    //     console.log('Unable to fetch documents.', err);
+    // });
+
+    //  GET COUNT
     // db.collection('ToDos').find().count( (err, count) => {
     //     if(err) 
     //         return console.log('Unable to fetch count.', err);
-       
+    //    
     //     console.log('ToDos Size', count);
     //     db.close();
     // });
 
+    //  FETCH DOCUMENTS
     // db.collection('ToDos').find({completed: false}).toArray().then( (docs) => {
     //     console.log('ToDos');
     //     console.log(JSON.stringify(docs, undefined, 2));
@@ -40,13 +66,14 @@ MongoClient.connect('mongodb://localhost:27017/ToDoApp', (err, db) => {
     //     console.log('Unable to fetch documents.', err);
     // });
 
+    //  INSERT ONE DOCUMENT
     // db.collection('ToDos').insertOne({
     //     todo: 'Something to do twice',
     //     completed: false
     // }, (err, result) => {
     //     if(err)
     //     return console.log('Unable to insert into collection!', err);
-
+    // 
     //     console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2));
     // });
 
