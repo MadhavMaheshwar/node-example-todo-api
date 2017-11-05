@@ -17,6 +17,17 @@ MongoClient.connect('mongodb://localhost:27017/ToDoApp', (err, db) => {
     console.log('Connected to MongoDB!');
     
     
+    // FINDING ONE ELEMENT
+    // Always use FINDONE instead of FIND
+    // returns null or one doc, not an array
+    // FINDBYID when searching by id
+
+    // Todo.findById(id).then( (todo) => {
+        // if(!todo)
+        // return console.log('Unable to find ~Todo!');
+        // console.log(todo);
+    // })
+
     //  FIND ONE AND UPDATE
     // db.collection('ToDos').findOneAndUpdate({
     //     _id: new ObjectID('59fc6a4883342c961082e6b3')

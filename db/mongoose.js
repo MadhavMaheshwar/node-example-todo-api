@@ -3,14 +3,16 @@
 
 var mongoose = require('mongoose');
 
+const MONGODB_URI = 'mongodb://madhav.maheshwar:mahesh12@ds249355.mlab.com:49355/todoapp';
+
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/ToDoApp');
+mongoose.connect(MONGODB_URI);
 
 module.exports = {
     mongoose
 };
 
-
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ToDoApp');
 
 
 // var Todo = mongoose.model('Todo', {
