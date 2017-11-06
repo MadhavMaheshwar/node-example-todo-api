@@ -17,6 +17,14 @@ MongoClient.connect('mongodb://localhost:27017/ToDoApp', (err, db) => {
     console.log('Connected to MongoDB!');
     
     
+
+    // REMOVE DOCS
+    // Todo.remove({})      // Remove all or specify like find
+    // Todo.findOneAndRemove
+    // Todo.findByIdAndRemove
+
+
+
     // FINDING ONE ELEMENT
     // Always use FINDONE instead of FIND
     // returns null or one doc, not an array

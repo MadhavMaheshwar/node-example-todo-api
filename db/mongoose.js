@@ -3,10 +3,8 @@
 
 var mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb://db_todo_app:todoapp@ds249355.mlab.com:49355/todoapp';
-
 mongoose.Promise = global.Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 module.exports = {
     mongoose
