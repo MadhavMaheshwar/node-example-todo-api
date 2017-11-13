@@ -1,0 +1,16 @@
+{
+    "production": {
+        "MONGODB_URI": "mongodb://db_todo_app:todoapp@ds249355.mlab.com:49355/todoapp",
+        "JWT_SECRET": "espresso"
+    },
+    "development": {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb://localhost:27017/ToDoApp",
+        "JWT_SECRET": "espresso"
+    },
+    "test": {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb://localhost:27017/ToDoAppTest",
+        "JWT_SECRET": "cafemocha"        
+    }
+}
